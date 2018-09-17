@@ -11,9 +11,9 @@ for t in xrange(input()):
         if stopx[i]=="0": winx.append(i+1)
         else: losex.append(i+1)
     for j in xrange(m):
-        if stopy[j]=="0": winy.append(i+1)
-        else: losey.append(i+1)
-        
+        if stopy[j]=="0": winy.append(j+1)
+        else: losey.append(j+1)
+    
     s = ""
     for q in xrange(input()):
         i,j = map(int,raw_input().split())
@@ -21,11 +21,12 @@ for t in xrange(input()):
         LX = bisect(losex,i)-1
         WY = bisect(winy,j)-1
         LY = bisect(losey,j)-1
+        #print WX,LX,WY,LY,winx[WX],losex[LX],winy[WY],losey[LY]
         m1 = (i-winx[WX])+(j)
         m2 = (i)+(j-winy[WY])
         m3 = (i-losex[LX])+(j)
         m4 = (i)+(j-losey[LY])
-        print m1,m2,m3,m4
+        #print m1,m2,m3,m4
         ans1 = min(m1,m2)
         ans2 = min(m3,m4)
         c = "1"
