@@ -1,4 +1,3 @@
-# Python 2
 t=int(raw_input())
 for _ in range(t):
     n,m=[int(x) for x in raw_input().split()]
